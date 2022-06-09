@@ -1,3 +1,4 @@
+import 'package:different_kind_of_button/category.dart';
 import 'package:different_kind_of_button/saved_data.dart';
 import 'package:flutter/material.dart';
 
@@ -18,14 +19,17 @@ class DesignButton extends StatelessWidget {
             ),
             text: 'ذخیره اطلاعات',
             textColor: Colors.white,
-            color: Color(0xff00126d),
+            color: const Color(0xff00126d),
           ),
           MyButton(
-            onPress: () => null,
-            text: 'انتخاب کنید',
-            textColor: Color(0xff00126d),
+            onPress: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Category()),
+            ),
+            text: 'دسته بندی',
+            textColor: const Color(0xff00126d),
             color: Colors.white,
-            shapeButton: RoundedRectangleBorder(
+            shapeButton: const RoundedRectangleBorder(
               side: BorderSide(color: Color(0xff00126d), width: 1),
             ),
           ),
@@ -51,8 +55,8 @@ class DesignButton extends StatelessWidget {
             onPress: () => null,
             text: 'انتخاب کنید',
             textColor: Colors.white,
-            color: Color(0xff00126d),
-            shapeButton: RoundedRectangleBorder(
+            color: const Color(0xff00126d),
+            shapeButton: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                   topRight: Radius.circular(50),
                   bottomLeft: Radius.circular(50)),
@@ -62,9 +66,9 @@ class DesignButton extends StatelessWidget {
           MyButton(
             onPress: () => null,
             text: 'انتخاب کنید',
-            textColor: Color(0xff00126d),
+            textColor: const Color(0xff00126d),
             color: Colors.white,
-            shapeButton: RoundedRectangleBorder(
+            shapeButton: const RoundedRectangleBorder(
               borderRadius: BorderRadius.only(
                   topRight: Radius.circular(50),
                   bottomLeft: Radius.circular(50)),

@@ -1,5 +1,6 @@
 import 'package:different_kind_of_button/category.dart';
 import 'package:different_kind_of_button/saved_data.dart';
+import 'package:different_kind_of_button/todo.dart';
 import 'package:flutter/material.dart';
 
 class DesignButton extends StatelessWidget {
@@ -34,8 +35,11 @@ class DesignButton extends StatelessWidget {
             ),
           ),
           MyButton(
-            onPress: () => null,
-            text: 'انتخاب کنید',
+            onPress: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Todo()),
+            ),
+            text: 'TO DO گرافیک',
             textColor: Colors.white,
             color: const Color(0xff00126d),
             shapeButton:

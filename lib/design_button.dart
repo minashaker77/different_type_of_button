@@ -1,4 +1,6 @@
 import 'package:different_kind_of_button/category.dart';
+import 'package:different_kind_of_button/notes.dart';
+import 'package:different_kind_of_button/qiuz_of_king.dart';
 import 'package:different_kind_of_button/saved_data.dart';
 import 'package:different_kind_of_button/todo.dart';
 import 'package:flutter/material.dart';
@@ -46,8 +48,11 @@ class DesignButton extends StatelessWidget {
                 RoundedRectangleBorder(borderRadius: BorderRadius.circular(50)),
           ),
           MyButton(
-            onPress: () => null,
-            text: 'انتخاب کنید',
+            onPress: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const QuizOfKing()),
+            ),
+            text: 'Quiz of king',
             textColor: const Color(0xff00126d),
             color: Colors.white,
             shapeButton: RoundedRectangleBorder(
@@ -56,8 +61,11 @@ class DesignButton extends StatelessWidget {
             ),
           ),
           MyButton(
-            onPress: () => null,
-            text: 'انتخاب کنید',
+            onPress: () => Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => const Notes()),
+            ),
+            text: 'یادداشت ها',
             textColor: Colors.white,
             color: const Color(0xff00126d),
             shapeButton: const RoundedRectangleBorder(
